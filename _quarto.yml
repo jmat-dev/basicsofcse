@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "web"
+  title: "24EST1004-K Basics of CSE"
   navbar:
     left:
       - href: index.qmd
