@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Justin Mathew">
+
+<title>Introduction to Computer Science – web</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">web</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module-1-introduction-to-computer-science" id="toc-module-1-introduction-to-computer-science" class="nav-link active" data-scroll-target="#module-1-introduction-to-computer-science">Module 1: Introduction to Computer Science</a>
+  <ul class="collapse">
+  <li><a href="#history-and-evolution-of-computers" id="toc-history-and-evolution-of-computers" class="nav-link" data-scroll-target="#history-and-evolution-of-computers">1. History and Evolution of Computers</a>
+  <ul class="collapse">
+  <li><a href="#the-early-beginnings" id="toc-the-early-beginnings" class="nav-link" data-scroll-target="#the-early-beginnings">1.1 The Early Beginnings</a></li>
+  <li><a href="#generations-of-computers" id="toc-generations-of-computers" class="nav-link" data-scroll-target="#generations-of-computers">1.2 Generations of Computers</a></li>
+  <li><a href="#milestones-in-computing" id="toc-milestones-in-computing" class="nav-link" data-scroll-target="#milestones-in-computing">1.3 Milestones in Computing</a></li>
+  </ul></li>
+  <li><a href="#overview-of-computer-systems" id="toc-overview-of-computer-systems" class="nav-link" data-scroll-target="#overview-of-computer-systems">2. Overview of Computer Systems</a>
+  <ul class="collapse">
+  <li><a href="#components-of-a-computer-system" id="toc-components-of-a-computer-system" class="nav-link" data-scroll-target="#components-of-a-computer-system">2.1 Components of a Computer System</a></li>
+  <li><a href="#types-of-computer-systems" id="toc-types-of-computer-systems" class="nav-link" data-scroll-target="#types-of-computer-systems">2.2 Types of Computer Systems</a></li>
+  </ul></li>
+  <li><a href="#basic-terminology-and-concepts" id="toc-basic-terminology-and-concepts" class="nav-link" data-scroll-target="#basic-terminology-and-concepts">3. Basic Terminology and Concepts</a>
+  <ul class="collapse">
+  <li><a href="#understanding-computer-hardware" id="toc-understanding-computer-hardware" class="nav-link" data-scroll-target="#understanding-computer-hardware">3.1 Understanding Computer Hardware</a></li>
+  <li><a href="#software-fundamentals" id="toc-software-fundamentals" class="nav-link" data-scroll-target="#software-fundamentals">3.2 Software Fundamentals</a></li>
+  <li><a href="#programming-languages-and-development" id="toc-programming-languages-and-development" class="nav-link" data-scroll-target="#programming-languages-and-development">3.3 Programming Languages and Development</a></li>
+  <li><a href="#execution-and-testing" id="toc-execution-and-testing" class="nav-link" data-scroll-target="#execution-and-testing">3.4 Execution and Testing</a></li>
+  </ul></li>
+  <li><a href="#applications-of-computer-science-and-engineering" id="toc-applications-of-computer-science-and-engineering" class="nav-link" data-scroll-target="#applications-of-computer-science-and-engineering">4. Applications of Computer Science and Engineering</a>
+  <ul class="collapse">
+  <li><a href="#software-development" id="toc-software-development" class="nav-link" data-scroll-target="#software-development">4.1 Software Development</a></li>
+  <li><a href="#data-science-and-analytics" id="toc-data-science-and-analytics" class="nav-link" data-scroll-target="#data-science-and-analytics">4.2 Data Science and Analytics</a></li>
+  <li><a href="#network-and-security" id="toc-network-and-security" class="nav-link" data-scroll-target="#network-and-security">4.3 Network and Security</a></li>
+  <li><a href="#emerging-technologies" id="toc-emerging-technologies" class="nav-link" data-scroll-target="#emerging-technologies">4.4 Emerging Technologies</a></li>
+  <li><a href="#real-world-applications" id="toc-real-world-applications" class="nav-link" data-scroll-target="#real-world-applications">4.5 Real-World Applications</a></li>
+  </ul></li>
+  <li><a href="#summary-and-conclusion" id="toc-summary-and-conclusion" class="nav-link" data-scroll-target="#summary-and-conclusion">Summary and Conclusion</a></li>
+  </ul></li>
+  <li><a href="#module-2-hardware-and-pc-assembly" id="toc-module-2-hardware-and-pc-assembly" class="nav-link" data-scroll-target="#module-2-hardware-and-pc-assembly">Module 2: Hardware and PC Assembly</a>
+  <ul class="collapse">
+  <li><a href="#architecture-of-a-computer" id="toc-architecture-of-a-computer" class="nav-link" data-scroll-target="#architecture-of-a-computer">1. Architecture of a Computer</a>
+  <ul class="collapse">
+  <li><a href="#basic-computer-architecture" id="toc-basic-computer-architecture" class="nav-link" data-scroll-target="#basic-computer-architecture">1.1 Basic Computer Architecture</a></li>
+  <li><a href="#processor-cpu" id="toc-processor-cpu" class="nav-link" data-scroll-target="#processor-cpu">1.2 Processor (CPU)</a></li>
+  <li><a href="#memory" id="toc-memory" class="nav-link" data-scroll-target="#memory">1.3 Memory</a></li>
+  <li><a href="#io-devices" id="toc-io-devices" class="nav-link" data-scroll-target="#io-devices">1.4 I/O Devices</a></li>
+  <li><a href="#networking-devices" id="toc-networking-devices" class="nav-link" data-scroll-target="#networking-devices">1.5 Networking Devices</a></li>
+  </ul></li>
+  <li><a href="#assembling-a-pc" id="toc-assembling-a-pc" class="nav-link" data-scroll-target="#assembling-a-pc">2. Assembling a PC</a>
+  <ul class="collapse">
+  <li><a href="#pre-assembly-considerations" id="toc-pre-assembly-considerations" class="nav-link" data-scroll-target="#pre-assembly-considerations">2.1 Pre-assembly Considerations</a></li>
+  <li><a href="#step-by-step-assembly-guide" id="toc-step-by-step-assembly-guide" class="nav-link" data-scroll-target="#step-by-step-assembly-guide">2.2 Step-by-Step Assembly Guide</a></li>
+  <li><a href="#troubleshooting-common-issues" id="toc-troubleshooting-common-issues" class="nav-link" data-scroll-target="#troubleshooting-common-issues">2.3 Troubleshooting Common Issues</a></li>
+  </ul></li>
+  <li><a href="#additional-hardware-devices" id="toc-additional-hardware-devices" class="nav-link" data-scroll-target="#additional-hardware-devices">3. Additional Hardware Devices</a>
+  <ul class="collapse">
+  <li><a href="#graphics-processing-unit-gpu" id="toc-graphics-processing-unit-gpu" class="nav-link" data-scroll-target="#graphics-processing-unit-gpu">3.1 Graphics Processing Unit (GPU)</a></li>
+  <li><a href="#sound-cards-and-audio-interfaces" id="toc-sound-cards-and-audio-interfaces" class="nav-link" data-scroll-target="#sound-cards-and-audio-interfaces">3.2 Sound Cards and Audio Interfaces</a></li>
+  <li><a href="#additional-storage-options" id="toc-additional-storage-options" class="nav-link" data-scroll-target="#additional-storage-options">3.3 Additional Storage Options</a></li>
+  </ul></li>
+  <li><a href="#internet-of-things-iot" id="toc-internet-of-things-iot" class="nav-link" data-scroll-target="#internet-of-things-iot">4. Internet of Things (IoT)</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-iot" id="toc-introduction-to-iot" class="nav-link" data-scroll-target="#introduction-to-iot">4.1 Introduction to IoT</a></li>
+  <li><a href="#iot-architecture" id="toc-iot-architecture" class="nav-link" data-scroll-target="#iot-architecture">4.2 IoT Architecture</a></li>
+  </ul></li>
+  <li><a href="#augmented-reality-ar-and-virtual-reality-vr" id="toc-augmented-reality-ar-and-virtual-reality-vr" class="nav-link" data-scroll-target="#augmented-reality-ar-and-virtual-reality-vr">5. Augmented Reality (AR) and Virtual Reality (VR)</a>
+  <ul class="collapse">
+  <li><a href="#understanding-ar-and-vr" id="toc-understanding-ar-and-vr" class="nav-link" data-scroll-target="#understanding-ar-and-vr">5.1 Understanding AR and VR</a></li>
+  <li><a href="#arvr-hardware" id="toc-arvr-hardware" class="nav-link" data-scroll-target="#arvr-hardware">5.2 AR/VR Hardware</a></li>
+  <li><a href="#developing-arvr-content" id="toc-developing-arvr-content" class="nav-link" data-scroll-target="#developing-arvr-content">5.3 Developing AR/VR Content</a></li>
+  </ul></li>
+  <li><a href="#summary-and-conclusion-1" id="toc-summary-and-conclusion-1" class="nav-link" data-scroll-target="#summary-and-conclusion-1">Summary and Conclusion</a></li>
+  </ul></li>
+  <li><a href="#module-3-software" id="toc-module-3-software" class="nav-link" data-scroll-target="#module-3-software">Module 3: Software</a>
+  <ul class="collapse">
+  <li><a href="#types-of-software" id="toc-types-of-software" class="nav-link" data-scroll-target="#types-of-software">1. Types of Software</a>
+  <ul class="collapse">
+  <li><a href="#application-software" id="toc-application-software" class="nav-link" data-scroll-target="#application-software">1.1 Application Software</a></li>
+  <li><a href="#proprietary-software" id="toc-proprietary-software" class="nav-link" data-scroll-target="#proprietary-software">1.2 Proprietary Software</a></li>
+  <li><a href="#open-source-software" id="toc-open-source-software" class="nav-link" data-scroll-target="#open-source-software">1.3 Open Source Software</a></li>
+  </ul></li>
+  <li><a href="#system-software" id="toc-system-software" class="nav-link" data-scroll-target="#system-software">2. System Software</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">2.1 Definition</a></li>
+  <li><a href="#operating-systems" id="toc-operating-systems" class="nav-link" data-scroll-target="#operating-systems">2.2 Operating Systems</a></li>
+  <li><a href="#translation-software" id="toc-translation-software" class="nav-link" data-scroll-target="#translation-software">2.3 Translation Software</a></li>
+  <li><a href="#linker" id="toc-linker" class="nav-link" data-scroll-target="#linker">2.4 Linker</a></li>
+  <li><a href="#loader" id="toc-loader" class="nav-link" data-scroll-target="#loader">2.5 Loader</a></li>
+  </ul></li>
+  <li><a href="#bios-and-post" id="toc-bios-and-post" class="nav-link" data-scroll-target="#bios-and-post">3. BIOS and POST</a>
+  <ul class="collapse">
+  <li><a href="#bios-basic-inputoutput-system" id="toc-bios-basic-inputoutput-system" class="nav-link" data-scroll-target="#bios-basic-inputoutput-system">3.1 BIOS (Basic Input/Output System)</a></li>
+  <li><a href="#post-power-on-self-test" id="toc-post-power-on-self-test" class="nav-link" data-scroll-target="#post-power-on-self-test">3.2 POST (Power-On Self Test)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#module-4-databases-and-networks" id="toc-module-4-databases-and-networks" class="nav-link" data-scroll-target="#module-4-databases-and-networks">Module 4: Databases and Networks</a>
+  <ul class="collapse">
+  <li><a href="#types-of-data" id="toc-types-of-data" class="nav-link" data-scroll-target="#types-of-data">1. Types of Data</a>
+  <ul class="collapse">
+  <li><a href="#structured-data" id="toc-structured-data" class="nav-link" data-scroll-target="#structured-data">1.1 Structured Data</a></li>
+  <li><a href="#semi-structured-data" id="toc-semi-structured-data" class="nav-link" data-scroll-target="#semi-structured-data">1.2 Semi-structured Data</a></li>
+  <li><a href="#unstructured-data" id="toc-unstructured-data" class="nav-link" data-scroll-target="#unstructured-data">1.3 Unstructured Data</a></li>
+  </ul></li>
+  <li><a href="#database-management-systems-dbms" id="toc-database-management-systems-dbms" class="nav-link" data-scroll-target="#database-management-systems-dbms">2. Database Management Systems (DBMS)</a>
+  <ul class="collapse">
+  <li><a href="#definition-1" id="toc-definition-1" class="nav-link" data-scroll-target="#definition-1">2.1 Definition</a></li>
+  <li><a href="#types-of-dbms" id="toc-types-of-dbms" class="nav-link" data-scroll-target="#types-of-dbms">2.2 Types of DBMS</a></li>
+  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">2.3 Use Cases</a></li>
+  </ul></li>
+  <li><a href="#networking-basics" id="toc-networking-basics" class="nav-link" data-scroll-target="#networking-basics">3. Networking Basics</a>
+  <ul class="collapse">
+  <li><a href="#definition-2" id="toc-definition-2" class="nav-link" data-scroll-target="#definition-2">3.1 Definition</a></li>
+  <li><a href="#types-of-networks" id="toc-types-of-networks" class="nav-link" data-scroll-target="#types-of-networks">3.2 Types of Networks</a></li>
+  <li><a href="#networking-devices-1" id="toc-networking-devices-1" class="nav-link" data-scroll-target="#networking-devices-1">3.3 Networking Devices</a></li>
+  </ul></li>
+  <li><a href="#networking-topologies-and-protocols" id="toc-networking-topologies-and-protocols" class="nav-link" data-scroll-target="#networking-topologies-and-protocols">4. Networking Topologies and Protocols</a>
+  <ul class="collapse">
+  <li><a href="#networking-topologies" id="toc-networking-topologies" class="nav-link" data-scroll-target="#networking-topologies">4.1 Networking Topologies</a></li>
+  <li><a href="#networking-protocols" id="toc-networking-protocols" class="nav-link" data-scroll-target="#networking-protocols">4.2 Networking Protocols</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#module-5-design-of-a-software-system" id="toc-module-5-design-of-a-software-system" class="nav-link" data-scroll-target="#module-5-design-of-a-software-system">Module 5: Design of a Software System</a>
+  <ul class="collapse">
+  <li><a href="#design-principles" id="toc-design-principles" class="nav-link" data-scroll-target="#design-principles">1. Design Principles</a>
+  <ul class="collapse">
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">1.1 Consistency</a></li>
+  <li><a href="#visibility" id="toc-visibility" class="nav-link" data-scroll-target="#visibility">1.2 Visibility</a></li>
+  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">1.3 Feedback</a></li>
+  <li><a href="#affordance" id="toc-affordance" class="nav-link" data-scroll-target="#affordance">1.4 Affordance</a></li>
+  </ul></li>
+  <li><a href="#color-and-typography" id="toc-color-and-typography" class="nav-link" data-scroll-target="#color-and-typography">2. Color and Typography</a>
+  <ul class="collapse">
+  <li><a href="#color" id="toc-color" class="nav-link" data-scroll-target="#color">2.1 Color</a></li>
+  <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">2.2 Typography</a></li>
+  </ul></li>
+  <li><a href="#user-centric-design" id="toc-user-centric-design" class="nav-link" data-scroll-target="#user-centric-design">3. User-Centric Design</a>
+  <ul class="collapse">
+  <li><a href="#definition-3" id="toc-definition-3" class="nav-link" data-scroll-target="#definition-3">3.1 Definition</a></li>
+  <li><a href="#layout-and-interactive-prototypes" id="toc-layout-and-interactive-prototypes" class="nav-link" data-scroll-target="#layout-and-interactive-prototypes">3.2 Layout and Interactive Prototypes</a></li>
+  </ul></li>
+  <li><a href="#overview-of-ui-design-tools" id="toc-overview-of-ui-design-tools" class="nav-link" data-scroll-target="#overview-of-ui-design-tools">4. Overview of UI Design Tools</a>
+  <ul class="collapse">
+  <li><a href="#figma" id="toc-figma" class="nav-link" data-scroll-target="#figma">4.1 Figma</a></li>
+  <li><a href="#sketch" id="toc-sketch" class="nav-link" data-scroll-target="#sketch">4.2 Sketch</a></li>
+  <li><a href="#adobe-xd" id="toc-adobe-xd" class="nav-link" data-scroll-target="#adobe-xd">4.3 Adobe XD</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#assignment-1-exploring-computer-systems-and-hardware" id="toc-assignment-1-exploring-computer-systems-and-hardware" class="nav-link" data-scroll-target="#assignment-1-exploring-computer-systems-and-hardware">Assignment 1: Exploring Computer Systems and Hardware</a>
+  <ul class="collapse">
+  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective:</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions:</a></li>
+  <li><a href="#part-1-research-and-questions" id="toc-part-1-research-and-questions" class="nav-link" data-scroll-target="#part-1-research-and-questions">Part 1: Research and Questions</a>
+  <ul class="collapse">
+  <li><a href="#history-and-evolution-of-computers-1" id="toc-history-and-evolution-of-computers-1" class="nav-link" data-scroll-target="#history-and-evolution-of-computers-1">1. History and Evolution of Computers</a></li>
+  <li><a href="#overview-of-computer-systems-1" id="toc-overview-of-computer-systems-1" class="nav-link" data-scroll-target="#overview-of-computer-systems-1">2. Overview of Computer Systems</a></li>
+  <li><a href="#types-of-data-1" id="toc-types-of-data-1" class="nav-link" data-scroll-target="#types-of-data-1">3. Types of Data</a></li>
+  <li><a href="#database-management-systems-dbms-1" id="toc-database-management-systems-dbms-1" class="nav-link" data-scroll-target="#database-management-systems-dbms-1">4. Database Management Systems (DBMS)</a></li>
+  <li><a href="#networking-basics-1" id="toc-networking-basics-1" class="nav-link" data-scroll-target="#networking-basics-1">5. Networking Basics</a></li>
+  </ul></li>
+  <li><a href="#part-2-practical-exercise" id="toc-part-2-practical-exercise" class="nav-link" data-scroll-target="#part-2-practical-exercise">Part 2: Practical Exercise</a>
+  <ul class="collapse">
+  <li><a href="#pc-assembly-scenario" id="toc-pc-assembly-scenario" class="nav-link" data-scroll-target="#pc-assembly-scenario">PC Assembly Scenario</a></li>
+  <li><a href="#submission-guidelines" id="toc-submission-guidelines" class="nav-link" data-scroll-target="#submission-guidelines">Submission Guidelines:</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#assignment-software-design-databases-and-networking" id="toc-assignment-software-design-databases-and-networking" class="nav-link" data-scroll-target="#assignment-software-design-databases-and-networking">Assignment: Software Design, Databases, and Networking</a>
+  <ul class="collapse">
+  <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective:</a></li>
+  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions:</a></li>
+  <li><a href="#part-1-research-and-questions-1" id="toc-part-1-research-and-questions-1" class="nav-link" data-scroll-target="#part-1-research-and-questions-1">Part 1: Research and Questions</a>
+  <ul class="collapse">
+  <li><a href="#types-of-software-1" id="toc-types-of-software-1" class="nav-link" data-scroll-target="#types-of-software-1">1. Types of Software</a></li>
+  <li><a href="#database-management-systems-dbms-2" id="toc-database-management-systems-dbms-2" class="nav-link" data-scroll-target="#database-management-systems-dbms-2">2. Database Management Systems (DBMS)</a></li>
+  <li><a href="#networking-basics-2" id="toc-networking-basics-2" class="nav-link" data-scroll-target="#networking-basics-2">3. Networking Basics</a></li>
+  </ul></li>
+  <li><a href="#part-2-practical-exercise-1" id="toc-part-2-practical-exercise-1" class="nav-link" data-scroll-target="#part-2-practical-exercise-1">Part 2: Practical Exercise</a>
+  <ul class="collapse">
+  <li><a href="#software-system-design" id="toc-software-system-design" class="nav-link" data-scroll-target="#software-system-design">Software System Design</a></li>
+  <li><a href="#submission-guidelines-1" id="toc-submission-guidelines-1" class="nav-link" data-scroll-target="#submission-guidelines-1">Submission Guidelines:</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Computer Science</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Justin Mathew </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Invalid Date</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="module-1-introduction-to-computer-science" class="level1">
+<h1>Module 1: Introduction to Computer Science</h1>
+<section id="history-and-evolution-of-computers" class="level2">
+<h2 class="anchored" data-anchor-id="history-and-evolution-of-computers">1. History and Evolution of Computers</h2>
+<section id="the-early-beginnings" class="level3">
+<h3 class="anchored" data-anchor-id="the-early-beginnings">1.1 The Early Beginnings</h3>
+<p>Computing has a rich history that dates back to ancient times. Early computing devices like the Abacus and mechanical calculators were the first attempts to aid in manual computation. The invention of the Turing Machine by Alan Turing in 1936 was a significant milestone, laying the theoretical foundation for modern computers.</p>
+</section>
+<section id="generations-of-computers" class="level3">
+<h3 class="anchored" data-anchor-id="generations-of-computers">1.2 Generations of Computers</h3>
+<ul>
+<li><strong>First Generation (1940-1956) - Vacuum Tubes</strong>: The first electronic computers used vacuum tubes and were enormous, consuming vast amounts of power. ENIAC and UNIVAC are notable examples.</li>
+<li><strong>Second Generation (1956-1963) - Transistors</strong>: Transistors replaced vacuum tubes, making computers smaller, faster, and more energy-efficient.</li>
+<li><strong>Third Generation (1964-1971) - Integrated Circuits</strong>: The development of integrated circuits further miniaturized computers, leading to the first commercially available computers.</li>
+<li><strong>Fourth Generation (1971-Present) - Microprocessors</strong>: The invention of the microprocessor brought about personal computers (PCs). This era saw the rise of companies like IBM, Apple, and Microsoft.</li>
+<li><strong>Fifth Generation (Present and Beyond) - Artificial Intelligence</strong>: Modern computers are characterized by advancements in AI, machine learning, and quantum computing.</li>
+</ul>
+</section>
+<section id="milestones-in-computing" class="level3">
+<h3 class="anchored" data-anchor-id="milestones-in-computing">1.3 Milestones in Computing</h3>
+<ul>
+<li><strong>Development of the Internet</strong>: Originally a military project, the Internet has transformed communication, commerce, and entertainment.</li>
+<li><strong>The Rise of Personal Computing</strong>: The 1980s saw the mass adoption of personal computers in homes and offices.</li>
+<li><strong>Cloud Computing and Big Data</strong>: The ability to store and process large datasets over the Internet has revolutionized industries.</li>
+<li><strong>Advances in Artificial Intelligence and Machine Learning</strong>: AI is now integral to various applications, from autonomous vehicles to personalized medicine.</li>
+</ul>
+</section>
+</section>
+<section id="overview-of-computer-systems" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-computer-systems">2. Overview of Computer Systems</h2>
+<section id="components-of-a-computer-system" class="level3">
+<h3 class="anchored" data-anchor-id="components-of-a-computer-system">2.1 Components of a Computer System</h3>
+<ul>
+<li><strong>Hardware</strong>: This includes physical components like the CPU, memory, storage devices, and input/output peripherals.</li>
+<li><strong>Software</strong>: Software can be categorized into system software (like operating systems) and application software (like word processors).</li>
+<li><strong>Data</strong>: Data is the information processed by computers, and it plays a central role in computing.</li>
+</ul>
+</section>
+<section id="types-of-computer-systems" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-computer-systems">2.2 Types of Computer Systems</h3>
+<ul>
+<li><strong>Personal Computers</strong>: These are general-purpose computers designed for individual use.</li>
+<li><strong>Servers and Mainframes</strong>: Servers manage network resources, while mainframes are used for large-scale computing tasks.</li>
+<li><strong>Embedded Systems</strong>: Found in devices like cars and home appliances, these systems are designed for specific tasks.</li>
+<li><strong>Supercomputers</strong>: The fastest computers, used for complex calculations in fields like weather forecasting and scientific simulations.</li>
+</ul>
+</section>
+</section>
+<section id="basic-terminology-and-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="basic-terminology-and-concepts">3. Basic Terminology and Concepts</h2>
+<section id="understanding-computer-hardware" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-computer-hardware">3.1 Understanding Computer Hardware</h3>
+<ul>
+<li><strong>Central Processing Unit (CPU)</strong>: The CPU is the brain of the computer, responsible for executing instructions.</li>
+<li><strong>Memory (RAM, ROM)</strong>: RAM is temporary memory used during processing, while ROM is permanent storage for critical system instructions.</li>
+<li><strong>Storage Devices (Hard Drives, SSDs)</strong>: These devices store data permanently. SSDs are faster and more durable than traditional hard drives.</li>
+<li><strong>Input and Output Devices</strong>: Keyboards, mice, and monitors are examples of devices that allow users to interact with the computer.</li>
+</ul>
+</section>
+<section id="software-fundamentals" class="level3">
+<h3 class="anchored" data-anchor-id="software-fundamentals">3.2 Software Fundamentals</h3>
+<ul>
+<li><strong>System Software</strong>: This includes operating systems like Windows, macOS, and Linux, which manage hardware and software resources.</li>
+<li><strong>Application Software</strong>: Programs like Microsoft Office, web browsers, and graphic design tools are designed for specific tasks.</li>
+</ul>
+</section>
+<section id="programming-languages-and-development" class="level3">
+<h3 class="anchored" data-anchor-id="programming-languages-and-development">3.3 Programming Languages and Development</h3>
+<ul>
+<li><strong>Low-Level vs.&nbsp;High-Level Languages</strong>: Low-level languages (like Assembly) are closer to machine code, while high-level languages (like Python, Java) are more abstract and easier to learn.</li>
+<li><strong>Overview of Popular Programming Languages</strong>: Python is known for its simplicity, Java for cross-platform capabilities, and C++ for performance-critical applications.</li>
+<li><strong>Software Development Life Cycle (SDLC)</strong>: The SDLC includes phases like planning, designing, coding, testing, deployment, and maintenance.</li>
+</ul>
+</section>
+<section id="execution-and-testing" class="level3">
+<h3 class="anchored" data-anchor-id="execution-and-testing">3.4 Execution and Testing</h3>
+<ul>
+<li><strong>Compilation vs.&nbsp;Interpretation</strong>: Compiled languages (like C++) translate code into machine language before execution, while interpreted languages (like Python) execute code line by line.</li>
+<li><strong>Debugging and Error Handling</strong>: Debugging is the process of identifying and fixing errors in code. Proper error handling ensures that a program can gracefully manage unexpected situations.</li>
+<li><strong>Testing</strong>: Testing ensures the quality and functionality of software. It includes:
+<ul>
+<li><strong>Unit Testing</strong>: Testing individual components.</li>
+<li><strong>Integration Testing</strong>: Testing the interaction between components.</li>
+<li><strong>System Testing</strong>: Testing the entire system for defects.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="applications-of-computer-science-and-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-computer-science-and-engineering">4. Applications of Computer Science and Engineering</h2>
+<section id="software-development" class="level3">
+<h3 class="anchored" data-anchor-id="software-development">4.1 Software Development</h3>
+<ul>
+<li><strong>Web Development</strong>: Involves creating websites and web applications using technologies like HTML, CSS, JavaScript, and backend languages like Python and PHP.</li>
+<li><strong>Mobile Application Development</strong>: Focuses on building applications for mobile platforms like iOS and Android using languages like Swift and Kotlin.</li>
+<li><strong>Desktop Software</strong>: Includes developing traditional software applications for operating systems like Windows, macOS, and Linux.</li>
+</ul>
+</section>
+<section id="data-science-and-analytics" class="level3">
+<h3 class="anchored" data-anchor-id="data-science-and-analytics">4.2 Data Science and Analytics</h3>
+<ul>
+<li><strong>Big Data Processing</strong>: Involves handling and analyzing large datasets using tools like Hadoop and Spark.</li>
+<li><strong>Machine Learning Algorithms</strong>: Algorithms like decision trees, neural networks, and clustering are used for tasks like predictive analytics and pattern recognition.</li>
+<li><strong>Data Visualization</strong>: Tools like Tableau and Matplotlib help in visualizing data to derive insights.</li>
+</ul>
+</section>
+<section id="network-and-security" class="level3">
+<h3 class="anchored" data-anchor-id="network-and-security">4.3 Network and Security</h3>
+<ul>
+<li><strong>Cybersecurity Principles</strong>: Protecting computer systems and networks from attacks. This includes encryption, firewalls, and secure coding practices.</li>
+<li><strong>Networking Protocols</strong>: Protocols like TCP/IP, HTTP, and FTP define the rules for data transmission across networks.</li>
+<li><strong>Cloud Computing</strong>: Offers on-demand access to computing resources over the Internet. Popular cloud platforms include AWS, Google Cloud, and Microsoft Azure.</li>
+</ul>
+</section>
+<section id="emerging-technologies" class="level3">
+<h3 class="anchored" data-anchor-id="emerging-technologies">4.4 Emerging Technologies</h3>
+<ul>
+<li><strong>Internet of Things (IoT)</strong>: IoT involves connecting everyday objects to the Internet, enabling them to send and receive data.</li>
+<li><strong>Artificial Intelligence and Robotics</strong>: AI powers intelligent systems, while robotics focuses on designing and building robots.</li>
+<li><strong>Quantum Computing</strong>: A cutting-edge technology that leverages quantum mechanics to perform computations far faster than classical computers.</li>
+</ul>
+</section>
+<section id="real-world-applications" class="level3">
+<h3 class="anchored" data-anchor-id="real-world-applications">4.5 Real-World Applications</h3>
+<ul>
+<li><strong>Healthcare</strong>: Computers are used in medical imaging, electronic health records, and telemedicine.</li>
+<li><strong>Finance</strong>: Algorithmic trading, blockchain technology, and digital payments have transformed the financial sector.</li>
+<li><strong>Entertainment</strong>: Video games, virtual reality (VR), and streaming services rely heavily on computer science for their operation and development.</li>
+</ul>
+</section>
+</section>
+<section id="summary-and-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="summary-and-conclusion">Summary and Conclusion</h2>
+<ul>
+<li><strong>Recap of Key Concepts</strong>: A summary of the major topics covered, emphasizing the role of computer science in driving innovation.</li>
+<li><strong>The Role of Computer Science in Modern Society</strong>: A discussion on how computer science impacts various industries and day-to-day life.</li>
+<li><strong>Future Trends and Career Opportunities</strong>: Insights into emerging fields like AI, cybersecurity, and data science, and the career paths available in computer science.</li>
+</ul>
+</section>
+</section>
+<section id="module-2-hardware-and-pc-assembly" class="level1">
+<h1>Module 2: Hardware and PC Assembly</h1>
+<section id="architecture-of-a-computer" class="level2">
+<h2 class="anchored" data-anchor-id="architecture-of-a-computer">1. Architecture of a Computer</h2>
+<section id="basic-computer-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="basic-computer-architecture">1.1 Basic Computer Architecture</h3>
+<ul>
+<li><strong>Von Neumann Architecture</strong>: An overview of the traditional architecture, including the CPU, memory, and input/output subsystems.</li>
+<li><strong>Motherboard</strong>: The central hub that connects all the components of a computer. Discussion on buses, chipsets, and form factors (ATX, Micro-ATX, etc.).</li>
+<li><strong>Power Supply Unit (PSU)</strong>: The role of the PSU in converting and distributing power to all components.</li>
+</ul>
+</section>
+<section id="processor-cpu" class="level3">
+<h3 class="anchored" data-anchor-id="processor-cpu">1.2 Processor (CPU)</h3>
+<ul>
+<li><strong>Central Processing Unit (CPU)</strong>: The brain of the computer, responsible for executing instructions. Overview of CPU components: Control Unit (CU), Arithmetic Logic Unit (ALU), and Registers.</li>
+<li><strong>Multi-core Processors</strong>: Explanation of dual-core, quad-core, and other multi-core processors, including hyper-threading.</li>
+<li><strong>CPU Cooling</strong>: Importance of cooling, different types of cooling methods (air, liquid), and thermal management.</li>
+</ul>
+</section>
+<section id="memory" class="level3">
+<h3 class="anchored" data-anchor-id="memory">1.3 Memory</h3>
+<ul>
+<li><strong>Primary Memory</strong>: Explanation of RAM (Random Access Memory) and its types (DDR, DDR2, DDR3, DDR4, DDR5). Overview of ROM (Read-Only Memory).</li>
+<li><strong>Secondary Storage</strong>: Different types of storage devices, including Hard Disk Drives (HDD), Solid-State Drives (SSD), and Optical Drives.</li>
+<li><strong>Cache Memory</strong>: The role of cache in speeding up CPU operations, including different levels of cache (L1, L2, L3).</li>
+</ul>
+</section>
+<section id="io-devices" class="level3">
+<h3 class="anchored" data-anchor-id="io-devices">1.4 I/O Devices</h3>
+<ul>
+<li><strong>Input Devices</strong>: Explanation of keyboards, mice, scanners, and other input peripherals.</li>
+<li><strong>Output Devices</strong>: Overview of monitors, printers, speakers, and other output devices.</li>
+<li><strong>Peripheral Connectivity</strong>: Different types of ports and connectors (USB, HDMI, DisplayPort, etc.), and their uses.</li>
+</ul>
+</section>
+<section id="networking-devices" class="level3">
+<h3 class="anchored" data-anchor-id="networking-devices">1.5 Networking Devices</h3>
+<ul>
+<li><strong>Network Interface Card (NIC)</strong>: The role of the NIC in enabling network connectivity.</li>
+<li><strong>Routers and Switches</strong>: Explanation of how routers and switches manage network traffic.</li>
+<li><strong>Modems and Access Points</strong>: The function of modems in converting signals, and the role of access points in wireless networking.</li>
+<li><strong>Cabling</strong>: Overview of Ethernet cables (Cat5e, Cat6), fiber optics, and wireless technologies.</li>
+</ul>
+</section>
+</section>
+<section id="assembling-a-pc" class="level2">
+<h2 class="anchored" data-anchor-id="assembling-a-pc">2. Assembling a PC</h2>
+<section id="pre-assembly-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="pre-assembly-considerations">2.1 Pre-assembly Considerations</h3>
+<ul>
+<li><strong>Component Selection</strong>: Criteria for choosing compatible components (motherboard, CPU, GPU, RAM, storage).</li>
+<li><strong>Workspace Setup</strong>: Preparing a clean, static-free environment with the necessary tools.</li>
+</ul>
+</section>
+<section id="step-by-step-assembly-guide" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step-assembly-guide">2.2 Step-by-Step Assembly Guide</h3>
+<ul>
+<li><strong>Installing the CPU</strong>: Proper handling and installation of the CPU onto the motherboard.</li>
+<li><strong>Installing RAM</strong>: Inserting memory modules into the motherboard.</li>
+<li><strong>Mounting the Motherboard</strong>: Securing the motherboard inside the case.</li>
+<li><strong>Installing Storage Devices</strong>: Connecting HDDs, SSDs, and optical drives.</li>
+<li><strong>Connecting Power Supply</strong>: Attaching power connectors to the motherboard, CPU, GPU, and storage devices.</li>
+<li><strong>Connecting I/O Devices</strong>: Hooking up peripherals to the appropriate ports.</li>
+<li><strong>Initial Power-Up and BIOS Setup</strong>: Powering on the system and configuring BIOS settings.</li>
+</ul>
+</section>
+<section id="troubleshooting-common-issues" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting-common-issues">2.3 Troubleshooting Common Issues</h3>
+<ul>
+<li><strong>No POST (Power-On Self-Test)</strong>: Diagnosing issues when the system fails to start.</li>
+<li><strong>Boot Errors</strong>: Resolving common boot-related problems.</li>
+<li><strong>Hardware Compatibility Issues</strong>: Identifying and resolving conflicts between components.</li>
+</ul>
+</section>
+</section>
+<section id="additional-hardware-devices" class="level2">
+<h2 class="anchored" data-anchor-id="additional-hardware-devices">3. Additional Hardware Devices</h2>
+<section id="graphics-processing-unit-gpu" class="level3">
+<h3 class="anchored" data-anchor-id="graphics-processing-unit-gpu">3.1 Graphics Processing Unit (GPU)</h3>
+<ul>
+<li><strong>Integrated vs.&nbsp;Dedicated GPUs</strong>: Differences and use cases for integrated and dedicated graphics.</li>
+<li><strong>GPU Architecture</strong>: Explanation of cores, clock speed, VRAM, and cooling solutions.</li>
+<li><strong>Gaming and Professional GPUs</strong>: Differences between GPUs designed for gaming and those for professional tasks like 3D rendering.</li>
+</ul>
+</section>
+<section id="sound-cards-and-audio-interfaces" class="level3">
+<h3 class="anchored" data-anchor-id="sound-cards-and-audio-interfaces">3.2 Sound Cards and Audio Interfaces</h3>
+<ul>
+<li><strong>Sound Cards</strong>: The role of sound cards in enhancing audio quality.</li>
+<li><strong>External Audio Interfaces</strong>: Devices used for professional audio recording and production.</li>
+</ul>
+</section>
+<section id="additional-storage-options" class="level3">
+<h3 class="anchored" data-anchor-id="additional-storage-options">3.3 Additional Storage Options</h3>
+<ul>
+<li><strong>External Hard Drives and SSDs</strong>: Use cases and benefits of external storage.</li>
+<li><strong>Network Attached Storage (NAS)</strong>: Explanation of NAS devices for centralized data storage and access.</li>
+</ul>
+</section>
+</section>
+<section id="internet-of-things-iot" class="level2">
+<h2 class="anchored" data-anchor-id="internet-of-things-iot">4. Internet of Things (IoT)</h2>
+<section id="introduction-to-iot" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-iot">4.1 Introduction to IoT</h3>
+<ul>
+<li><strong>Definition and Overview</strong>: Understanding IoT and its significance in connecting devices.</li>
+<li><strong>IoT Devices</strong>: Examples of IoT devices in smart homes, healthcare, and industrial applications.</li>
+<li><strong>Communication Protocols</strong>: Overview of protocols like MQTT, Zigbee, and Bluetooth.</li>
+</ul>
+</section>
+<section id="iot-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="iot-architecture">4.2 IoT Architecture</h3>
+<ul>
+<li><strong>Sensors and Actuators</strong>: Role of sensors in collecting data and actuators in performing actions.</li>
+<li><strong>Edge Computing</strong>: Processing data at the edge of the network to reduce latency.</li>
+<li><strong>Cloud Integration</strong>: How IoT devices connect to cloud platforms for data storage and analytics.</li>
+</ul>
+</section>
+</section>
+<section id="augmented-reality-ar-and-virtual-reality-vr" class="level2">
+<h2 class="anchored" data-anchor-id="augmented-reality-ar-and-virtual-reality-vr">5. Augmented Reality (AR) and Virtual Reality (VR)</h2>
+<section id="understanding-ar-and-vr" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-ar-and-vr">5.1 Understanding AR and VR</h3>
+<ul>
+<li><strong>Definitions and Differences</strong>: Distinguishing between AR (overlaying digital content on the real world) and VR (immersive digital environments).</li>
+<li><strong>Applications of AR/VR</strong>: Use cases in gaming, education, healthcare, and training simulations.</li>
+</ul>
+</section>
+<section id="arvr-hardware" class="level3">
+<h3 class="anchored" data-anchor-id="arvr-hardware">5.2 AR/VR Hardware</h3>
+<ul>
+<li><strong>Head-Mounted Displays (HMDs)</strong>: Devices like Oculus Rift, HTC Vive, and Microsoft HoloLens.</li>
+<li><strong>Controllers and Sensors</strong>: Devices that track user movements and interactions in AR/VR environments.</li>
+</ul>
+</section>
+<section id="developing-arvr-content" class="level3">
+<h3 class="anchored" data-anchor-id="developing-arvr-content">5.3 Developing AR/VR Content</h3>
+<ul>
+<li><strong>Software Tools</strong>: Introduction to tools like Unity, Unreal Engine, and ARKit for creating AR/VR experiences.</li>
+<li><strong>Challenges in AR/VR Development</strong>: Discussing issues like motion sickness, hardware limitations, and content creation.</li>
+</ul>
+</section>
+</section>
+<section id="summary-and-conclusion-1" class="level2">
+<h2 class="anchored" data-anchor-id="summary-and-conclusion-1">Summary and Conclusion</h2>
+<ul>
+<li><strong>Recap of Key Concepts</strong>: A summary of the major topics covered, emphasizing the importance of understanding hardware components and PC assembly.</li>
+<li><strong>Future Trends</strong>: A look at emerging technologies in hardware, IoT, and AR/VR, and their potential impact on the industry.</li>
+<li><strong>Practical Applications</strong>: Encouraging hands-on practice in PC assembly and experimentation with IoT and AR/VR devices.</li>
+</ul>
+</section>
+</section>
+<section id="module-3-software" class="level1">
+<h1>Module 3: Software</h1>
+<section id="types-of-software" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-software">1. Types of Software</h2>
+<section id="application-software" class="level3">
+<h3 class="anchored" data-anchor-id="application-software">1.1 Application Software</h3>
+<ul>
+<li><strong>Definition</strong>: Software designed to help users perform specific tasks or functions, such as word processing, spreadsheet management, or browsing the internet.</li>
+<li><strong>Examples</strong>: Microsoft Office Suite (Word, Excel, PowerPoint), web browsers like Chrome and Firefox, media players, and graphic design tools.</li>
+</ul>
+</section>
+<section id="proprietary-software" class="level3">
+<h3 class="anchored" data-anchor-id="proprietary-software">1.2 Proprietary Software</h3>
+<ul>
+<li><strong>Definition</strong>: Software that is owned by an individual or a company and is distributed under a licensing agreement that restricts use, modification, and distribution.</li>
+<li><strong>Examples</strong>: Microsoft Windows, Adobe Photoshop, and Apple macOS.</li>
+<li><strong>Advantages</strong>: Often comes with dedicated support, frequent updates, and a high level of integration with hardware.</li>
+<li><strong>Disadvantages</strong>: Generally requires purchase or subscription, and users have limited control over the software.</li>
+</ul>
+</section>
+<section id="open-source-software" class="level3">
+<h3 class="anchored" data-anchor-id="open-source-software">1.3 Open Source Software</h3>
+<ul>
+<li><strong>Definition</strong>: Software with source code that is made available to the public, allowing anyone to view, modify, and distribute it.</li>
+<li><strong>Examples</strong>: Linux operating systems (Ubuntu, Fedora), Apache Web Server, and GIMP (a graphic editor).</li>
+<li><strong>Advantages</strong>: Free to use, modify, and distribute. Encourages community collaboration and innovation.</li>
+<li><strong>Disadvantages</strong>: May lack official support, and some open-source projects may have less frequent updates or be less user-friendly.</li>
+</ul>
+</section>
+</section>
+<section id="system-software" class="level2">
+<h2 class="anchored" data-anchor-id="system-software">2. System Software</h2>
+<section id="definition" class="level3">
+<h3 class="anchored" data-anchor-id="definition">2.1 Definition</h3>
+<ul>
+<li><strong>System Software</strong>: Software designed to manage the system’s hardware and provide a platform for running application software. It acts as an intermediary between the user and the computer hardware.</li>
+</ul>
+</section>
+<section id="operating-systems" class="level3">
+<h3 class="anchored" data-anchor-id="operating-systems">2.2 Operating Systems</h3>
+<ul>
+<li><strong>Definition</strong>: The software that manages all of the hardware and other software on a computer. It provides essential functions like file management, process management, and hardware management.</li>
+<li><strong>Examples</strong>: Microsoft Windows, Linux distributions, and macOS.</li>
+<li><strong>Functions</strong>:
+<ul>
+<li><strong>Process Management</strong>: Manages the execution of processes, including multitasking and multiprocessing.</li>
+<li><strong>Memory Management</strong>: Allocates memory to processes and ensures optimal utilization of the system’s RAM.</li>
+<li><strong>File System Management</strong>: Manages files on storage devices, ensuring data is stored and retrieved efficiently.</li>
+<li><strong>Device Management</strong>: Manages communication between the system’s hardware and the software applications.</li>
+</ul></li>
+</ul>
+</section>
+<section id="translation-software" class="level3">
+<h3 class="anchored" data-anchor-id="translation-software">2.3 Translation Software</h3>
+<ul>
+<li><strong>Assemblers</strong>: Convert assembly language code into machine code.</li>
+<li><strong>Compilers</strong>: Translate high-level programming languages (like C++, Java) into machine code, producing an executable program.</li>
+<li><strong>Interpreters</strong>: Translate high-level code into machine code line by line, executing each instruction immediately.</li>
+<li><strong>Difference Between Compilers and Interpreters</strong>: Compilers translate the entire program at once, while interpreters translate it line by line.</li>
+</ul>
+</section>
+<section id="linker" class="level3">
+<h3 class="anchored" data-anchor-id="linker">2.4 Linker</h3>
+<ul>
+<li><strong>Definition</strong>: A program that takes one or more object files generated by a compiler and combines them into a single executable file. It resolves references between the object files, connecting function calls with their definitions.</li>
+<li><strong>Function</strong>: The linker links various object files, ensuring that the program is complete and can be executed by the operating system.</li>
+</ul>
+</section>
+<section id="loader" class="level3">
+<h3 class="anchored" data-anchor-id="loader">2.5 Loader</h3>
+<ul>
+<li><strong>Definition</strong>: A program that loads the executable file into memory, preparing it for execution. It is responsible for placing the code and data in memory, setting up any required data structures, and starting the program’s execution.</li>
+<li><strong>Function</strong>: The loader reads the executable file’s instructions and data into the appropriate memory locations, adjusting addresses as necessary, and then transfers control to the starting point of the program.</li>
+</ul>
+</section>
+</section>
+<section id="bios-and-post" class="level2">
+<h2 class="anchored" data-anchor-id="bios-and-post">3. BIOS and POST</h2>
+<section id="bios-basic-inputoutput-system" class="level3">
+<h3 class="anchored" data-anchor-id="bios-basic-inputoutput-system">3.1 BIOS (Basic Input/Output System)</h3>
+<ul>
+<li><strong>Definition</strong>: Firmware used to perform hardware initialization during the booting process and to provide runtime services for operating systems and programs. It is the first software that runs when a computer is powered on.</li>
+<li><strong>Functions</strong>:
+<ul>
+<li><strong>Power-On Self Test (POST)</strong>: Checks the system’s hardware to ensure everything is functioning correctly before loading the operating system.</li>
+<li><strong>Bootstrap Loader</strong>: Locates the operating system and passes control to it, allowing the OS to take over the boot process.</li>
+<li><strong>BIOS Setup Utility</strong>: Allows users to configure hardware settings, such as system clock, boot sequence, and hardware settings.</li>
+</ul></li>
+</ul>
+</section>
+<section id="post-power-on-self-test" class="level3">
+<h3 class="anchored" data-anchor-id="post-power-on-self-test">3.2 POST (Power-On Self Test)</h3>
+<ul>
+<li><strong>Definition</strong>: A diagnostic testing sequence run by the BIOS to check the integrity and functionality of the computer’s hardware components, such as the CPU, RAM, and storage devices, before loading the operating system.</li>
+<li><strong>Function</strong>:
+<ul>
+<li><strong>Hardware Testing</strong>: Verifies that all essential hardware components are present and functioning correctly.</li>
+<li><strong>Error Reporting</strong>: If any issues are detected, the POST process will typically produce a series of beeps or display an error message indicating the faulty component.</li>
+<li><strong>Transition to Bootloader</strong>: Upon successful completion of POST, the BIOS hands over control to the bootloader to continue the booting process.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="module-4-databases-and-networks" class="level1">
+<h1>Module 4: Databases and Networks</h1>
+<section id="types-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-data">1. Types of Data</h2>
+<section id="structured-data" class="level3">
+<h3 class="anchored" data-anchor-id="structured-data">1.1 Structured Data</h3>
+<ul>
+<li><strong>Definition</strong>: Data that is organized into a defined structure, usually in rows and columns, making it easily searchable by algorithms.</li>
+<li><strong>Examples</strong>: Relational databases like SQL databases (MySQL, PostgreSQL), spreadsheets.</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Organized into tables with predefined schema.</li>
+<li>Data types are defined (e.g., integer, string).</li>
+<li>Easily queryable using SQL (Structured Query Language).</li>
+</ul></li>
+</ul>
+</section>
+<section id="semi-structured-data" class="level3">
+<h3 class="anchored" data-anchor-id="semi-structured-data">1.2 Semi-structured Data</h3>
+<ul>
+<li><strong>Definition</strong>: Data that does not reside in a relational database but still has some organizational properties that make it easier to analyze.</li>
+<li><strong>Examples</strong>: JSON files, XML files, NoSQL databases like MongoDB.</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Contains tags or markers to separate data elements.</li>
+<li>More flexible than structured data but less rigid.</li>
+<li>Can be partially queried using specific query languages (e.g., XPath for XML, JSONPath for JSON).</li>
+</ul></li>
+</ul>
+</section>
+<section id="unstructured-data" class="level3">
+<h3 class="anchored" data-anchor-id="unstructured-data">1.3 Unstructured Data</h3>
+<ul>
+<li><strong>Definition</strong>: Data that has no predefined format or organization, making it more challenging to process and analyze.</li>
+<li><strong>Examples</strong>: Text documents, images, videos, social media posts.</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>No specific structure or schema.</li>
+<li>Requires more complex processing techniques, such as natural language processing (NLP) for text data.</li>
+<li>Stored in data lakes or NoSQL databases.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="database-management-systems-dbms" class="level2">
+<h2 class="anchored" data-anchor-id="database-management-systems-dbms">2. Database Management Systems (DBMS)</h2>
+<section id="definition-1" class="level3">
+<h3 class="anchored" data-anchor-id="definition-1">2.1 Definition</h3>
+<ul>
+<li><strong>DBMS</strong>: Software that uses a standard method to store and organize data, providing mechanisms for retrieval, management, and manipulation of data.</li>
+<li><strong>Functions</strong>:
+<ul>
+<li><strong>Data Storage</strong>: Manages data storage efficiently, ensuring data consistency and integrity.</li>
+<li><strong>Query Processing</strong>: Provides tools to retrieve data using query languages like SQL.</li>
+<li><strong>Transaction Management</strong>: Ensures that multiple operations on the database are completed successfully (ACID properties).</li>
+<li><strong>Security Management</strong>: Controls access to the data, ensuring that only authorized users can perform certain operations.</li>
+</ul></li>
+</ul>
+</section>
+<section id="types-of-dbms" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-dbms">2.2 Types of DBMS</h3>
+<ul>
+<li><strong>Relational DBMS (RDBMS)</strong>: Stores data in tables with relationships between them. Examples include MySQL, PostgreSQL, and Oracle.</li>
+<li><strong>NoSQL DBMS</strong>: Designed for unstructured or semi-structured data, offering flexibility in how data is stored and accessed. Examples include MongoDB, Cassandra, and Redis.</li>
+<li><strong>In-Memory DBMS</strong>: Stores data in the main memory rather than on disk to provide faster access. Examples include Redis and Memcached.</li>
+<li><strong>Distributed DBMS</strong>: Manages data across multiple databases in different locations, providing a single view of the data. Examples include Google Spanner and Amazon Aurora.</li>
+</ul>
+</section>
+<section id="use-cases" class="level3">
+<h3 class="anchored" data-anchor-id="use-cases">2.3 Use Cases</h3>
+<ul>
+<li><strong>Enterprise Data Management</strong>: RDBMSs are commonly used in businesses to manage customer information, financial data, and inventory.</li>
+<li><strong>Big Data Analytics</strong>: NoSQL databases are employed in big data environments where large volumes of unstructured data need to be processed, such as in social media analytics.</li>
+<li><strong>Real-time Applications</strong>: In-memory databases are used in applications requiring low-latency data access, such as online gaming and financial trading platforms.</li>
+<li><strong>Cloud-based Applications</strong>: Distributed DBMSs are utilized in cloud environments to ensure data availability and redundancy across different regions.</li>
+</ul>
+</section>
+</section>
+<section id="networking-basics" class="level2">
+<h2 class="anchored" data-anchor-id="networking-basics">3. Networking Basics</h2>
+<section id="definition-2" class="level3">
+<h3 class="anchored" data-anchor-id="definition-2">3.1 Definition</h3>
+<ul>
+<li><strong>Networking</strong>: The practice of connecting computers and other devices together to share resources, communicate, and collaborate. It forms the backbone of modern communication systems, enabling the exchange of data over local and wide areas.</li>
+</ul>
+</section>
+<section id="types-of-networks" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-networks">3.2 Types of Networks</h3>
+<ul>
+<li><strong>Local Area Network (LAN)</strong>: A network that connects computers within a limited area, such as a home, school, or office building.</li>
+<li><strong>Wide Area Network (WAN)</strong>: A network that covers a broad area (e.g., the internet) and connects LANs together.</li>
+<li><strong>Wireless Networks</strong>: Networks that use wireless data connections, such as Wi-Fi, to connect devices without physical cables.</li>
+</ul>
+</section>
+<section id="networking-devices-1" class="level3">
+<h3 class="anchored" data-anchor-id="networking-devices-1">3.3 Networking Devices</h3>
+<ul>
+<li><strong>Router</strong>: A device that forwards data packets between computer networks, directing traffic efficiently.</li>
+<li><strong>Switch</strong>: A device that connects devices within a LAN and uses MAC addresses to forward data to the correct destination.</li>
+<li><strong>Modem</strong>: A device that modulates and demodulates signals for data transmission over phone lines, cable systems, or satellite connections.</li>
+</ul>
+</section>
+</section>
+<section id="networking-topologies-and-protocols" class="level2">
+<h2 class="anchored" data-anchor-id="networking-topologies-and-protocols">4. Networking Topologies and Protocols</h2>
+<section id="networking-topologies" class="level3">
+<h3 class="anchored" data-anchor-id="networking-topologies">4.1 Networking Topologies</h3>
+<ul>
+<li><strong>Bus Topology</strong>: A single central cable (the bus) to which all network devices are connected. Data sent by one device is available to all devices, but only the intended recipient processes it.</li>
+<li><strong>Star Topology</strong>: All devices are connected to a central hub or switch. The hub sends the data to the correct device. This topology is commonly used in home networks.</li>
+<li><strong>Ring Topology</strong>: Devices are connected in a circular fashion, where each device is connected to two other devices, forming a ring. Data travels in one direction, passing through each device until it reaches its destination.</li>
+<li><strong>Mesh Topology</strong>: Every device is connected to every other device in the network. This topology offers high redundancy and reliability but is complex and expensive to implement.</li>
+</ul>
+</section>
+<section id="networking-protocols" class="level3">
+<h3 class="anchored" data-anchor-id="networking-protocols">4.2 Networking Protocols</h3>
+<ul>
+<li><strong>TCP/IP (Transmission Control Protocol/Internet Protocol)</strong>: The fundamental protocol suite for the internet, enabling reliable communication between devices.
+<ul>
+<li><strong>TCP</strong>: Ensures data is sent and received in the correct order and without errors.</li>
+<li><strong>IP</strong>: Handles the addressing and routing of packets across the network.</li>
+</ul></li>
+<li><strong>HTTP/HTTPS (Hypertext Transfer Protocol/Secure)</strong>: The protocol used by web browsers to communicate with web servers. HTTPS is the secure version, encrypting data for secure communication.</li>
+<li><strong>FTP (File Transfer Protocol)</strong>: A protocol for transferring files between computers on a network.</li>
+<li><strong>SMTP (Simple Mail Transfer Protocol)</strong>: Used for sending emails across networks.</li>
+<li><strong>DNS (Domain Name System)</strong>: Translates human-readable domain names (like www.example.com) into IP addresses that computers use to identify each other on the network.</li>
+<li><strong>DHCP (Dynamic Host Configuration Protocol)</strong>: Automatically assigns IP addresses to devices on a network, simplifying network management.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="module-5-design-of-a-software-system" class="level1">
+<h1>Module 5: Design of a Software System</h1>
+<section id="design-principles" class="level2">
+<h2 class="anchored" data-anchor-id="design-principles">1. Design Principles</h2>
+<section id="consistency" class="level3">
+<h3 class="anchored" data-anchor-id="consistency">1.1 Consistency</h3>
+<ul>
+<li><strong>Definition</strong>: Ensuring that design elements are uniform across the application, providing users with a predictable and intuitive experience.</li>
+<li><strong>Importance</strong>:
+<ul>
+<li><strong>User Expectations</strong>: Consistent design helps users build familiarity and understanding of how to interact with the system.</li>
+<li><strong>Usability</strong>: Reduces the learning curve and potential errors by maintaining uniformity in design patterns and interactions.</li>
+</ul></li>
+</ul>
+</section>
+<section id="visibility" class="level3">
+<h3 class="anchored" data-anchor-id="visibility">1.2 Visibility</h3>
+<ul>
+<li><strong>Definition</strong>: Making important elements and functions visible and easily accessible to users.</li>
+<li><strong>Importance</strong>:
+<ul>
+<li><strong>Discoverability</strong>: Users should be able to find features and actions without extensive searching.</li>
+<li><strong>Clarity</strong>: Ensures that users are aware of their current options and status within the application.</li>
+</ul></li>
+</ul>
+</section>
+<section id="feedback" class="level3">
+<h3 class="anchored" data-anchor-id="feedback">1.3 Feedback</h3>
+<ul>
+<li><strong>Definition</strong>: Providing users with clear and immediate responses to their actions within the system.</li>
+<li><strong>Importance</strong>:
+<ul>
+<li><strong>User Assurance</strong>: Feedback confirms that actions have been successfully completed or if there are errors.</li>
+<li><strong>Interaction Confirmation</strong>: Helps users understand the effects of their actions and provides guidance on how to proceed.</li>
+</ul></li>
+</ul>
+</section>
+<section id="affordance" class="level3">
+<h3 class="anchored" data-anchor-id="affordance">1.4 Affordance</h3>
+<ul>
+<li><strong>Definition</strong>: Design elements should suggest their functionality through their appearance.</li>
+<li><strong>Importance</strong>:
+<ul>
+<li><strong>Intuitive Interaction</strong>: Buttons, icons, and other elements should visually indicate their purpose (e.g., buttons should look clickable).</li>
+<li><strong>Ease of Use</strong>: Users can easily understand how to interact with elements based on their design.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="color-and-typography" class="level2">
+<h2 class="anchored" data-anchor-id="color-and-typography">2. Color and Typography</h2>
+<section id="color" class="level3">
+<h3 class="anchored" data-anchor-id="color">2.1 Color</h3>
+<ul>
+<li><strong>Role in Design</strong>:
+<ul>
+<li><strong>Visual Appeal</strong>: Enhances the aesthetic appeal and overall user experience.</li>
+<li><strong>Emotional Impact</strong>: Colors can evoke emotions and set the tone for the application.</li>
+<li><strong>Functionality</strong>: Used to highlight important information, create visual hierarchy, and guide user actions.</li>
+</ul></li>
+<li><strong>Best Practices</strong>:
+<ul>
+<li><strong>Contrast</strong>: Ensure sufficient contrast between text and background for readability.</li>
+<li><strong>Color Consistency</strong>: Use a consistent color scheme throughout the application to reinforce brand identity and improve usability.</li>
+<li><strong>Accessibility</strong>: Consider color blindness and ensure that color choices are accessible to all users.</li>
+</ul></li>
+</ul>
+</section>
+<section id="typography" class="level3">
+<h3 class="anchored" data-anchor-id="typography">2.2 Typography</h3>
+<ul>
+<li><strong>Role in Design</strong>:
+<ul>
+<li><strong>Readability</strong>: Affects how easily users can read and understand text.</li>
+<li><strong>Hierarchy</strong>: Helps establish a visual hierarchy, making it easier to navigate content.</li>
+<li><strong>Brand Identity</strong>: Contributes to the overall brand and aesthetic of the application.</li>
+</ul></li>
+<li><strong>Best Practices</strong>:
+<ul>
+<li><strong>Font Choices</strong>: Select fonts that are legible and align with the brand’s style.</li>
+<li><strong>Font Sizes</strong>: Use different sizes to differentiate headings, subheadings, and body text.</li>
+<li><strong>Line Spacing</strong>: Ensure appropriate spacing between lines of text to improve readability.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="user-centric-design" class="level2">
+<h2 class="anchored" data-anchor-id="user-centric-design">3. User-Centric Design</h2>
+<section id="definition-3" class="level3">
+<h3 class="anchored" data-anchor-id="definition-3">3.1 Definition</h3>
+<ul>
+<li><strong>User-Centric Design</strong>: A design approach that prioritizes the needs, preferences, and behaviors of users throughout the design process.</li>
+<li><strong>Importance</strong>:
+<ul>
+<li><strong>User Satisfaction</strong>: Ensures that the design meets user needs and expectations.</li>
+<li><strong>Usability</strong>: Creates a more intuitive and effective user experience by focusing on how users interact with the system.</li>
+</ul></li>
+</ul>
+</section>
+<section id="layout-and-interactive-prototypes" class="level3">
+<h3 class="anchored" data-anchor-id="layout-and-interactive-prototypes">3.2 Layout and Interactive Prototypes</h3>
+<ul>
+<li><strong>Layout</strong>: The arrangement of visual elements on a page or screen, including content, controls, and navigation.
+<ul>
+<li><strong>Principles</strong>:
+<ul>
+<li><strong>Alignment</strong>: Align elements to create a clean and organized appearance.</li>
+<li><strong>Hierarchy</strong>: Arrange elements to emphasize important information and guide user flow.</li>
+<li><strong>Spacing</strong>: Use spacing to separate elements and improve readability.</li>
+</ul></li>
+</ul></li>
+<li><strong>Interactive Prototypes</strong>: Mockups that simulate the interaction with the design, allowing users to experience and test the design before development.
+<ul>
+<li><strong>Benefits</strong>:
+<ul>
+<li><strong>User Feedback</strong>: Collect feedback on design usability and functionality.</li>
+<li><strong>Iteration</strong>: Refine and improve the design based on user interactions and feedback.</li>
+<li><strong>Communication</strong>: Provide a tangible representation of the design to stakeholders and developers.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="overview-of-ui-design-tools" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-ui-design-tools">4. Overview of UI Design Tools</h2>
+<section id="figma" class="level3">
+<h3 class="anchored" data-anchor-id="figma">4.1 Figma</h3>
+<ul>
+<li><strong>Description</strong>: A cloud-based UI design tool that enables real-time collaboration and prototyping.</li>
+<li><strong>Features</strong>:
+<ul>
+<li><strong>Collaborative Design</strong>: Multiple users can work on the same design simultaneously.</li>
+<li><strong>Prototyping</strong>: Create interactive prototypes with transitions and animations.</li>
+<li><strong>Design Systems</strong>: Support for creating and maintaining design systems and reusable components.</li>
+</ul></li>
+</ul>
+</section>
+<section id="sketch" class="level3">
+<h3 class="anchored" data-anchor-id="sketch">4.2 Sketch</h3>
+<ul>
+<li><strong>Description</strong>: A vector-based design tool for creating user interfaces and user experiences.</li>
+<li><strong>Features</strong>:
+<ul>
+<li><strong>Symbol Management</strong>: Use symbols for reusable design elements and components.</li>
+<li><strong>Artboards</strong>: Design multiple screens and layouts within a single document.</li>
+<li><strong>Plugins</strong>: Extensive plugin ecosystem for extending functionality and integrating with other tools.</li>
+</ul></li>
+</ul>
+</section>
+<section id="adobe-xd" class="level3">
+<h3 class="anchored" data-anchor-id="adobe-xd">4.3 Adobe XD</h3>
+<ul>
+<li><strong>Description</strong>: A UI/UX design tool from Adobe that provides capabilities for designing, prototyping, and sharing interactive experiences.</li>
+<li><strong>Features</strong>:
+<ul>
+<li><strong>Design and Prototyping</strong>: Create high-fidelity designs and interactive prototypes.</li>
+<li><strong>Collaboration</strong>: Share designs and prototypes with stakeholders for feedback.</li>
+<li><strong>Integration</strong>: Seamless integration with other Adobe Creative Cloud tools for a cohesive design workflow.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="assignment-1-exploring-computer-systems-and-hardware" class="level1">
+<h1>Assignment 1: Exploring Computer Systems and Hardware</h1>
+<section id="objective" class="level3">
+<h3 class="anchored" data-anchor-id="objective">Objective:</h3>
+<p>To understand the fundamental concepts of computer science and the basics of computer hardware, including the architecture of computers, hardware components, and their interactions.</p>
+</section>
+<section id="instructions" class="level3">
+<h3 class="anchored" data-anchor-id="instructions">Instructions:</h3>
+<ol type="1">
+<li><p><strong>Research and Answer Questions</strong>: Provide detailed answers to the following questions based on your understanding of Module 1 and Module 2. Use your own words and ensure clarity in your explanations.</p></li>
+<li><p><strong>Practical Exercise</strong>: Assemble a hypothetical PC build using the provided hardware components. Justify your choices based on your knowledge of hardware components and their roles.</p></li>
+<li><p><strong>Submit</strong>: Compile your answers and practical exercise into a single document and submit it by the given deadline.</p></li>
+</ol>
+</section>
+<section id="part-1-research-and-questions" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-research-and-questions">Part 1: Research and Questions</h2>
+<section id="history-and-evolution-of-computers-1" class="level3">
+<h3 class="anchored" data-anchor-id="history-and-evolution-of-computers-1">1. History and Evolution of Computers</h3>
+<ul>
+<li>Explain the key milestones in the evolution of computers from early mechanical devices to modern digital computers.</li>
+<li>Discuss the impact of these advancements on computer technology and society.</li>
+</ul>
+</section>
+<section id="overview-of-computer-systems-1" class="level3">
+<h3 class="anchored" data-anchor-id="overview-of-computer-systems-1">2. Overview of Computer Systems</h3>
+<ul>
+<li>Describe the basic components of a computer system and their functions (e.g., CPU, memory, storage, I/O devices).</li>
+<li>Explain how these components interact to perform computing tasks.</li>
+</ul>
+</section>
+<section id="types-of-data-1" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-data-1">3. Types of Data</h3>
+<ul>
+<li>Define and provide examples of structured, semi-structured, and unstructured data.</li>
+<li>Explain the importance of data classification for managing and analyzing information.</li>
+</ul>
+</section>
+<section id="database-management-systems-dbms-1" class="level3">
+<h3 class="anchored" data-anchor-id="database-management-systems-dbms-1">4. Database Management Systems (DBMS)</h3>
+<ul>
+<li>Differentiate between relational and NoSQL databases.</li>
+<li>Provide examples of use cases where each type of DBMS would be appropriate.</li>
+</ul>
+</section>
+<section id="networking-basics-1" class="level3">
+<h3 class="anchored" data-anchor-id="networking-basics-1">5. Networking Basics</h3>
+<ul>
+<li>Define key networking concepts such as LAN, WAN, and networking devices (router, switch, modem).</li>
+<li>Explain the purpose of networking topologies and protocols.</li>
+</ul>
+</section>
+</section>
+<section id="part-2-practical-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-practical-exercise">Part 2: Practical Exercise</h2>
+<section id="pc-assembly-scenario" class="level3">
+<h3 class="anchored" data-anchor-id="pc-assembly-scenario">PC Assembly Scenario</h3>
+<p>You are tasked with assembling a PC for a new office setup. Consider the following components for your build:</p>
+<ul>
+<li><strong>Processor (CPU)</strong></li>
+<li><strong>Memory (RAM)</strong></li>
+<li><strong>Storage (SSD/HDD)</strong></li>
+<li><strong>Motherboard</strong></li>
+<li><strong>Graphics Card (GPU)</strong></li>
+<li><strong>Power Supply Unit (PSU)</strong></li>
+<li><strong>Case</strong></li>
+<li><strong>Cooling System</strong></li>
+<li><strong>Networking Device (e.g., Network Interface Card)</strong></li>
+</ul>
+<p><strong>Instructions:</strong></p>
+<ol type="1">
+<li><p><strong>Select Components</strong>: Choose specific components for each category listed above. You may use real-world brands and models or hypothetical ones.</p></li>
+<li><p><strong>Justify Your Choices</strong>: For each component, provide a brief justification for your selection. Consider factors such as performance, compatibility, and cost.</p></li>
+<li><p><strong>Explain the Assembly</strong>: Describe how these components are assembled to create a functioning computer. Include details on how they connect and interact with each other.</p></li>
+<li><p><strong>Illustrate the Build</strong>: Create a simple diagram or schematic that illustrates the layout of your PC components inside the case.</p></li>
+</ol>
+</section>
+<section id="submission-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="submission-guidelines">Submission Guidelines:</h3>
+<ul>
+<li><strong>Document Format</strong>: Submit your answers and practical exercise in a PDF or Word document.</li>
+<li><strong>Length</strong>: Aim for a total of 4-6 pages, including diagrams.</li>
+<li><strong>Deadline</strong>: October 16, 2024</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="assignment-software-design-databases-and-networking" class="level1">
+<h1>Assignment: Software Design, Databases, and Networking</h1>
+<section id="objective-1" class="level3">
+<h3 class="anchored" data-anchor-id="objective-1">Objective:</h3>
+<p>To understand fundamental concepts in software design, databases, and networking. This assignment will test your knowledge of software types, database management systems, and networking principles, and apply design principles to a software system.</p>
+</section>
+<section id="instructions-1" class="level3">
+<h3 class="anchored" data-anchor-id="instructions-1">Instructions:</h3>
+<ol type="1">
+<li><p><strong>Research and Answer Questions</strong>: Provide detailed answers to the following questions based on your understanding of Module 3, Module 4, and Module 5. Use your own words and ensure clarity in your explanations.</p></li>
+<li><p><strong>Practical Exercise</strong>: Apply your knowledge to a practical scenario involving database design, networking, and software design principles.</p></li>
+<li><p><strong>Submit</strong>: Compile your answers and practical exercise into a single document and submit it by the given deadline.</p></li>
+</ol>
+</section>
+<section id="part-1-research-and-questions-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-research-and-questions-1">Part 1: Research and Questions</h2>
+<section id="types-of-software-1" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-software-1">1. Types of Software</h3>
+<ul>
+<li><strong>Question</strong>: Differentiate between application software and system software. Provide examples of each and discuss their respective roles in a computer system.</li>
+</ul>
+</section>
+<section id="database-management-systems-dbms-2" class="level3">
+<h3 class="anchored" data-anchor-id="database-management-systems-dbms-2">2. Database Management Systems (DBMS)</h3>
+<ul>
+<li><strong>Question</strong>: Explain the key differences between relational and NoSQL databases. Describe a scenario where each type would be the most suitable choice.</li>
+</ul>
+</section>
+<section id="networking-basics-2" class="level3">
+<h3 class="anchored" data-anchor-id="networking-basics-2">3. Networking Basics</h3>
+<ul>
+<li><strong>Question</strong>: Define and describe the purpose of common networking protocols such as HTTP, TCP/IP, and DNS. How do these protocols contribute to network communication?</li>
+</ul>
+</section>
+</section>
+<section id="part-2-practical-exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-practical-exercise-1">Part 2: Practical Exercise</h2>
+<section id="software-system-design" class="level3">
+<h3 class="anchored" data-anchor-id="software-system-design">Software System Design</h3>
+<p>You are tasked with designing a software system for a small business that needs to manage customer orders and inventory. Your design should address the following aspects:</p>
+<ol type="1">
+<li><strong>Database Design</strong>:
+<ul>
+<li><strong>Schema</strong>: Design a simple database schema for managing customer orders and inventory. Include tables for customers, orders, and products, and define the relationships between them.</li>
+<li><strong>Use Case</strong>: Explain how the database schema supports common queries and operations, such as adding new orders, updating inventory, and retrieving customer information.</li>
+</ul></li>
+<li><strong>Networking Considerations</strong>:
+<ul>
+<li><strong>Network Architecture</strong>: Describe the network architecture for the business, including how the system will be accessed by employees and any external stakeholders (e.g., customers placing orders online).</li>
+<li><strong>Security</strong>: Outline basic security measures to protect the data and ensure secure communication between the client and server.</li>
+</ul></li>
+<li><strong>Software Design Principles</strong>:
+<ul>
+<li><strong>Design Principles</strong>: Apply design principles such as consistency, visibility, feedback, and affordance to the user interface of the system. Explain how each principle is incorporated into the design.</li>
+<li><strong>User Interface</strong>: Describe the layout and interactive elements of the user interface, including any wireframes or mockups if applicable.</li>
+</ul></li>
+</ol>
+</section>
+<section id="submission-guidelines-1" class="level3">
+<h3 class="anchored" data-anchor-id="submission-guidelines-1">Submission Guidelines:</h3>
+<ul>
+<li><strong>Document Format</strong>: Submit your answers and practical exercise in a PDF or Word document.</li>
+<li><strong>Length</strong>: Aim for a total of 5-7 pages, including diagrams and mockups.</li>
+<li><strong>Deadline</strong>: November 18, 2024</li>
+</ul>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
